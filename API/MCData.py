@@ -23,12 +23,8 @@ def add_cmd(type:str, cmd:str):
     
     if type == "start":
         start = start + f"\n{cmd}"
-        print("Start:")
-        print(start)
     elif type == "loop":
         loop = loop + f"\n{cmd}"
-        print("Loop:")
-        print(loop)
 
 def cmd(cmd:str, type: str):
     if type == "start":
@@ -81,7 +77,7 @@ def inject(p: str):
     with open(os.path.join(tags_path, 'tick.json'), 'w', encoding='utf-8') as f:
         json.dump(tick_json, f, indent=4)
 
-    print(f"Datapack '{data}' criado na pasta '{p}'.")
+    print(f"Datapack '{data}' path '{p}'.")
 
 def give(_entity: str, item: str, NBT: str, count: int, _type: str):
     cmd(f"give {_entity} {item}[{NBT}] {count}", _type)
