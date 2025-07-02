@@ -152,8 +152,8 @@ class ExecutorWindow(QMainWindow):
             with open(nome_arquivo, "r", encoding="utf-8") as file:
                 self.editor.setPlainText(file.read())
             nome = os.path.basename(nome_arquivo)
-            if nome not in [self.script_list.item(i).text() for i in range(self.script_list.count())]:
-                self.script_list.addItem(nome)
+            #if nome not in [self.script_list.item(i).text() for i in range(self.script_list.count())]:
+                #self.script_list.addItem(nome)
 
     def salvar_arquivo(self):
         nome_arquivo, _ = QFileDialog.getSaveFileName(self, "Save script", "", "Python (*.py)")
