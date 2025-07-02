@@ -22,6 +22,10 @@ _p_ = config["path"]
 class ExecutorWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        
+        os.system("mode con: cols=60 lines=30")
+        os.system("title MCExecutor output")
+        os.system("color")
 
         self.setWindowTitle("MCExecutor")
         self.setFixedSize(800, 500)  # Tamanho fixo da janela
